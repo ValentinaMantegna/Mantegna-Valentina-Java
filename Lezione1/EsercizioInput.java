@@ -18,10 +18,10 @@ public class  EsercizioInput {
        
         int a = Integer.parseInt(numero);
 
-        int b =0;
-        System.out.println(b);
-        double n1 = (double)a;
-        char c = "A"; // singoli caratteri corrispondono a un numero (ASCII)
+       /*  int b =0;
+        System.out.println(b); */
+        //double n1 = (double)a;
+        char c = 'a'; // singoli caratteri corrispondono a un numero (ASCII), fare con una virgolettaf
         int n2 = (int)c;
         System.out.println(n2);
 
