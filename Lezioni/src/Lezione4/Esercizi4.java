@@ -20,7 +20,7 @@ Esercizio 6 (terminale - while): chiedere in loop all'utente un numero da 1 a 4.
 2 = rimozione numero lista
 3 = stampa lista
 4 = chiusura del programma.*/
-public class Esercizi4 {
+public class  Esercizi4 {
 
   /*  public static void main(String[] args) {
         Scanner tastiera = new Scanner(System.in);
