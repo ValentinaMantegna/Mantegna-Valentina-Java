@@ -15,3 +15,4 @@ Partendo dall'esercizio precedente inserire anche il calcolo delle funzioni trig
 -Ulteriore aggiunta: richiedo all'utente se vuole rieseguire un'altra operazione
 
 - Implementare l'esercizio chiedendo all'utenente se un  numero è divibile per:2,3,4,5
+-chiedere se il numero inserito x è divisibile per y( corrisponde ai numeri citati sopra)
