@@ -1,0 +1,17 @@
+- INPUT => Inserire due numeri per svolgere le operazioni richieste
+- Addizione
+- Sottrazione
+- Moltiplicazione
+- Divisione ( divisore deve essere diverso da 0; )
+- OUTPUT => Risultato delle operazioni
+
+Partendo dall'esercizio precedente inserire anche il calcolo delle funzioni trigonometriche
+ utilizzando i metodi della classe Math => in base all'operatore scelto eseguire l'operazione selezionata cioè:
+ -Premendo 1 => somma }
+ -Premendo 2 => differenza } => int operatoe =...
+ Scanner sc = new Scanner ( System.in)
+ int operatore = Integer.parseInt(sc.nextLine())
+
+-Ulteriore aggiunta: richiedo all'utente se vuole rieseguire un'altra operazione
+
+- Implementare l'esercizio chiedendo all'utenente se un  numero è divibile per:2,3,4,5
