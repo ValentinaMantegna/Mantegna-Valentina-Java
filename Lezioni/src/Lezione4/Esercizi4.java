@@ -20,7 +20,7 @@ Esercizio 6 (terminale - while): chiedere in loop all'utente un numero da 1 a 4.
 2 = rimozione numero lista
 3 = stampa lista
 4 = chiusura del programma.*/
-public class Esercizi4 {
+/*public class  Esercizi4 {
 
   /*  public static void main(String[] args) {
         Scanner tastiera = new Scanner(System.in);
@@ -61,7 +61,7 @@ public class Esercizi4 {
 
     // for each   (TIPO nome_variabile : nome_lista)
 
-    public static void main(String[] args) {
+ /*   public static void main(String[] args) {
         List<String> nomi = new ArrayList<>();
         nomi.add("Alice");
         nomi.add("Roberto");
@@ -81,11 +81,11 @@ public class Esercizi4 {
             if(!( primaLettera === "A" || primaLettera === "E" || primaLettera === "I" || primaLettera === "O" || primaLettera === "U")) {
 
             }
-        }
+        } */
 
-        System.out.println(nomi);
+     /*   System.out.println(nomi);
 
 
 
     }
-}
+} */
