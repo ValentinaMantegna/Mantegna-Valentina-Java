@@ -1,12 +1,24 @@
+/*- INPUT => Inserire due numeri per svolgere le operazioni richieste
+        - Addizione
+        - Sottrazione
+        - Moltiplicazione
+        - Divisione ( divisore deve essere diverso da 0; )
+        - OUTPUT => Risultato delle operazioni
+
+-   Ulteriore aggiunta: richiedo all'utente se vuole rieseguire un'altra operazione e
+se il divisore è uguale a 0 richiedo un altro divisore
+ */
+//@ author Valentina Mantegna
 import java.util.Scanner;
-// @author Valentina Mantegna
-public class CalcolatriceTrigonometrica {
+
+// Richiedo l'operazione
+public class RichiestaOperazioni {
 
     public static void main(String[] args) {
-        System.out.println("SCEGLI UNA TRA LE SEGUENTI OPERAZIONI:\n 1) SOMMA\n \t 2) DIFFERENZA\n \t 3) PRODOTTO\n \t 4) DIVIZIONE\n\t 5) SENO\n \t 6) COSENO\n \t 7) TANGENTE");
+        System.out.println("SCEGLI UNA TRA LE SEGUENTI OPERAZIONI:\n1) SOMMA\n \t 2) DIFFERENZA\n \t 3) PRODOTTO\n \t 4) DIVIZIONE");
         Scanner tastiera = new Scanner(System.in);
 
-
+  //String = toRepeat
         do {
             System.out.println("Inserisci l'operazione");
             int operatore = Integer.parseInt(tastiera.nextLine());
@@ -37,64 +49,29 @@ public class CalcolatriceTrigonometrica {
                     double dividendo = Double.parseDouble(tastiera.nextLine());
                     System.out.println("Inserisci il divisore");
                     double divisore = Double.parseDouble(tastiera.nextLine());
-                    double var10000;
-                    if (divisore == 0.0) {
-                        var10000 = Double.POSITIVE_INFINITY;
-                    } else {
-                        var10000 = dividendo / divisore;
-                    }
+                    double risultato;
+                    if (divisore != 0) {
+                       risultato= dividendo/divisore;
+                    } else
+                        do {
+                            System.out.println("Devi inserire un altro divisore");
+                            divisore = Double.parseDouble(tastiera.nextLine());
+                        } while (divisore == 0);  // end-do while
+
 
                     System.out.println("Il risultato  è: " + dividendo / divisore);
                     break;
-                case 5:
-                    System.out.println("Inserisci dato: ");
-                    double dato = Double.parseDouble(tastiera.nextLine());
-                    double rad = Math.toRadians(dato);
-                    System.out.println(" Il seno è " + Math.sin(rad));
-                    break;
-                case 6:
-                    System.out.println("Inserisci dato: ");
-                    double dato1 = Double.parseDouble(tastiera.nextLine());
-                    double rad1 = Math.toRadians(dato1);
-                    System.out.println(" Il coseno è " + Math.cos(rad1));
-                    break;
-                case 7:
-                    System.out.println("Inserisci dato: ");
-                    double dato2 = Double.parseDouble(tastiera.nextLine());
-                    double rad2 = Math.toRadians(dato2);
-                    System.out.println(" Il coseno è " + Math.tan(rad2));
-                    break;
                 default:
-                    System.out.println("DEVI SCEGLIERE GLI OPERATORI SCELTI!!!");
+                    System.out.println("DEVI SCEGLIERE GLI OPERATORI CORRETTI!!!");
             }
+        //    System.out.println("L'operatore scelto è " + operatore);
 
-            System.out.println("L'operatore scelto è " + operatore);
-
-            // Un'altra  operazione?
-
+            // Chiedi all'utente se vuole rieseguire un calcolo
             System.out.println("Vuoi eseguire un'altra operazione? (y/n)");
-        } while (tastiera.nextLine().equalsIgnoreCase("y"));
+           // System.out.println("premi y per ripetere);
+            //toRepeat = tastiera.nextLine())
+        } while (tastiera.nextLine().equalsIgnoreCase("y")); // while (toRepeat.equals("y"))
 
         System.out.println("Programma terminato");
-
-
-        System.out.print("Inserisci un numero: ");
-        int numero = Integer.parseInt(tastiera.nextLine());
-
-        controllaSeDivisibile(numero, 2);
-        controllaSeDivisibile(numero, 3);
-        controllaSeDivisibile(numero, 4);
-        controllaSeDivisibile(numero, 5);
     }
-
-    public static void controllaSeDivisibile(int x, int y) {
-        if (x % y == 0) {
-            System.out.println(x + " è divisibile per " + y + ".");
-        } else {
-            System.out.println(x + " non è divisibile per " + y + ".");
-        }
-
-
     }
-
-  }
