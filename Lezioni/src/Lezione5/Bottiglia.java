@@ -45,4 +45,22 @@ public class Bottiglia {
                 ", quantità=" + quantità +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Bottiglia bottiglia = (Bottiglia) o;
+
+        if (capacità != bottiglia.capacità) return false;
+        return quantità == bottiglia.quantità;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = capacità;
+        result = 31 * result + quantità;
+        return result;
+    }
 }
