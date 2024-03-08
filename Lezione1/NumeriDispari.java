@@ -1,4 +1,6 @@
+//Scrivere una funzione che dati N numeri, dica se tutti questi N numeri sono dispari
 public class NumeriDispari {
+
     public static void main(String[] args) {
         int[] array = {23, 57, 67, 99, 311};
 

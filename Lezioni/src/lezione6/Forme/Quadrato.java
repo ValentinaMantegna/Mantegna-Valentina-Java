@@ -2,12 +2,15 @@ package lezione6.Forme;
 
 public class Quadrato extends Poligono {
 
-    int base = 20;
-    int altezza = 20;
+    double lato;
 
-    public int area;
+    @Override
+    public double area() {
+        return lato * lato;
+    }
 
-    public int Quadrato(int base, int altezza) {
-        return area = base * altezza;
+    @Override
+    public double perimetro() {
+        return 4 * lato;
     }
 }

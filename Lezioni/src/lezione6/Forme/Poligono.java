@@ -9,11 +9,10 @@ package lezione6.Forme;
 //Creare una List<Poligono> forme, inserire un triangolo, un quadrato, un rettangolo e calcolare la somma
 // delle aree.
 public class Poligono {
+     public double area() { return 0; }
 
-    int base;
-    int altezza;
 
-    public static int area(int base, int altezza ) {
+    public double perimetro() {
         return 0;
     }
 
