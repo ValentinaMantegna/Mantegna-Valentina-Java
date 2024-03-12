@@ -21,7 +21,7 @@ public class Triangolo extends Poligono {
 
     @Override
     public double area() {
-        // Calcolo dell'area del triangolo usando la formula di Herone
+        // Calcolo dell'area del triangolo usando la formula di Erone
         double semiPerimetro = (lato1 + lato2 + lato3) / 2;
         return Math.sqrt(semiPerimetro * (semiPerimetro - lato1) * (semiPerimetro - lato2) * (semiPerimetro - lato3));
         // Nota: questo calcolo non tiene conto dei casi in cui il triangolo potrebbe non essere valido

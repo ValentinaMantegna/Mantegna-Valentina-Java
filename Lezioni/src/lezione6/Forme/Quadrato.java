@@ -4,6 +4,8 @@ public class Quadrato extends Poligono {
 
     double lato;
 
+    //public quadrato(double lato) {
+    //super(lato,lato)
     @Override
     public double area() {
         return lato * lato;

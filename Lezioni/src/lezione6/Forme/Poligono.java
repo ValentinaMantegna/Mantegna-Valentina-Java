@@ -8,12 +8,16 @@ package lezione6.Forme;
 
 //Creare una List<Poligono> forme, inserire un triangolo, un quadrato, un rettangolo e calcolare la somma
 // delle aree.
-public class Poligono {
-     public double area() { return 0; }
+public class Poligono { //public abstract class Poligono così da non farlo leggere perchè non ci serve
+     public double area() { return 0; } //posso togliere il return e specificare che sia astratto
 
 
     public double perimetro() {
         return 0;
-    }
+    } //public abstract perimetro() => modo per dire che quella classe/metodo
+    //non siamo capaci di descriverlo,ma diciamo che esiste
+
+
+    //una classe non astratta deve fare gli override => rettangolo,quadrato,triangolo
 
 }
