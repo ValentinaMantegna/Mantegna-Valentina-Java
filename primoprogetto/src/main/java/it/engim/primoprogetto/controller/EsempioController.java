@@ -14,7 +14,7 @@ public class EsempioController {
     @Autowired
     LibroRepository libroRepository; //deve salvare qua dentro con Autowired(inizializza senza new
     // accedere dal controller ai libri
-    @GetMapping("/getLibri") //fa una REST API=> sottopagine restituite in jsono
+    @GetMapping("/getLibri") //fa una REST API=> sottopagine restituite in json
     public List<Libro> getLibri() {
         return libroRepository.findAll();
     }
