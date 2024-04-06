@@ -12,9 +12,14 @@ public class Main2 {
 
         // Modifica del soprannome della prima persona
         if (!people.isEmpty()) {
-            people.get(0).setNickname("NewNickname");
+            people.get(0).setNickname("Giovanni");
         }
-
+        //public static List<Persona> modificaNomePersona(List<Persona>p.int indx,String nomeNuovo) {
+        //Persona pers=p.get(idx);
+        //pers.setNome(nomeNuovo);
+        //p.set(indx,pers);
+        //return p;
+    //}
         // Creazione della struttura dati per il Paese Italia
         Country italy = new Country("Italy");
         italy.addCity("Lombardy", "Milan");
@@ -29,15 +34,16 @@ public class Main2 {
         math.addGrade(4);
 
         Subject history = new Subject("History");
-        history.addGrade(9);
         history.addGrade(5);
-        history.addGrade(7);
-        history.addGrade(3);
+        history.addGrade(5);
+        history.addGrade(5);
+        history.addGrade(5);
 
         // Calcolo della media dei voti per ogni materia
         System.out.println("Average grades:");
         System.out.println("Math: " + math.calculateAverage());
         System.out.println("History: " + history.calculateAverage());
+        System.out.println("Il nick di Johnny è: "+ people.get(0).getNickname());
 
         // Stampare le materie con voti insufficienti
         System.out.println("\nSubjects with insufficient grades:");
