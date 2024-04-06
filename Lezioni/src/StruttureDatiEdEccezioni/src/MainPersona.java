@@ -1,3 +1,5 @@
+package StruttureDatiEdEccezioni.src;
+
 import java.util.ArrayList;
 import java.util.List;
 /*hoh => commentare Ctrl+ Shift+ / che si trova molto a destra*/
@@ -11,7 +13,12 @@ public class MainPersona {
         Persone.add(new Persona("Maria","Addolorata","24WQDFDK5WAQ","23/08/1997"));
         Persone.add(new Persona ("Stella","Marina","56WQFDKSWAQ","06/05/2000"));
 
-        System.out.println(Persona.);
+
     }
 
+    static class PersonaNotFoundException extends Exception {
+            public PersonaNotFoundException(String message) {
+                super(message);
+            }
+        }
 }

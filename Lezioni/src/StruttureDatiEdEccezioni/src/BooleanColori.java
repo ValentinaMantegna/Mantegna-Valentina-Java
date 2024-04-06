@@ -1,4 +1,4 @@
-//Scrivere un metodo che restituisca true se un colore è contenuto nella lista, false altrimenti;
+package StruttureDatiEdEccezioni.src;//Scrivere un metodo che restituisca true se un colore è contenuto nella lista, false altrimenti;
 //il Main deve essere pulito
 
 import java.util.ArrayList;
@@ -15,9 +15,8 @@ public class BooleanColori {
 
         System.out.println(TrovaColore(colori, "blu"));
         System.out.println(TrovaColore(colori, "Giallo"));
-        System.out.println(TrovaIndice(colori,"Verde"));
-        System.out.println(TrovaIndice(colori,"Blu"));
-
+        System.out.println(TrovaIndice(colori, "Verde"));
+        System.out.println(TrovaIndice(colori, "Blu"));
 
 
     }

@@ -1,3 +1,5 @@
+package StruttureDatiEdEccezioni.src;
+
 import java.util.Date;
 //Scrivere un programma che dato un oggetto persona, inserisca all’interno di un arraylist più persone;
 //Inserire una persona controllando se esiste già una persona con lo stesso CF. Se esiste PersonaAlreadyExistException;
