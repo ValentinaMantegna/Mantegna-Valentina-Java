@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Biglietteria
+
+   # cambiare la porta, l'accensione significa che il programma va a ceracre tutte le risorse
+
+server:
+  port: 8085
