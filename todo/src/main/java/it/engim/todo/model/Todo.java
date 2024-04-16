@@ -24,6 +24,7 @@ public class Todo {
 
     private boolean completato;
 
+
     public enum Priorita{
 
         ALTA, NORMALE, BASSA
@@ -76,4 +77,5 @@ public class Todo {
     public void setCompletato(boolean completato) {
         this.completato = completato;
     }
+
 }
