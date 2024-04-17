@@ -9,7 +9,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Fermata_Ferma_Linea implements Serializable {
+public class FermataLinea implements Serializable {
 
     private String nomeFermata;
     private String nomeLinea;
