@@ -1,0 +1,17 @@
+PROGETTO JDBC:
+
+1- Creare il DB:
+  -1.1. Creare le varie entità e le relative relazioni con i vari vincoli di chiave primaria ed esterna;
+  -1.2. Popolare il database inserendo dei record in ogni tabella e nelle relative relazioni.
+
+2- Creare il progetto Spring JDBC:
+  -2.1. Inserire le librerie (Lombok,MySQL, Spring Web, DevTools);
+  -2.2. Creare i vari package (modeel,Controller,Repository,Payload, Constants);
+  -2.3. Per ogni entità creare il relativo model:
+     -2.3.1. Inserisco i campi UGUALI ai nomi delle colonne presenti sul DB(di ogni entità)
+     -2.3.2. Inserisco anche i relativi decorator/annotazioni di lombok.
+  -2.4. Creare il file di configurazione delle costanti del DB(URL,USER;PPW)!!!
+  -2.5. Creare per ogni model la corrispettiva repository
+        con i metodi CRUD( COPIA ED INCOLLA DA PROGETTI PRECEDENTI)
+  -2.6. Creare il controller e testare con postman.
+

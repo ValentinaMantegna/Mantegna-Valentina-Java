@@ -20,5 +20,5 @@ public class FermataController {
         return FermataRepository.selezionaAllFermate();
     }
 
-@GetMapping"  "
+
 }
