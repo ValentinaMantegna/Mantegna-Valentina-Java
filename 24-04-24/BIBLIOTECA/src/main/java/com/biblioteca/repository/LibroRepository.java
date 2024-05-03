@@ -9,7 +9,7 @@ import java.util.List;
 
 public class LibroRepository {
     public static List<Libro> selezionaTuttiLibri() {
-        List<Libro> LibroList= new ArrayList<>();
+        List<Libro> LibroList = new ArrayList<>();
         try {
             Connection connection = DriverManager.getConnection(DbConfig.URL, DbConfig.USER, DbConfig.PPW); //credenziali d'accesso del database e sono universali //ci connettiamo al DB
             String query = "SELECT * FROM LIBRO";
@@ -37,21 +37,50 @@ public class LibroRepository {
     }
 
     //Metodo per inserire un nuovo libro nel DB
-    public static void inserisciLibro(Libro libro) {
+    public static String inserisciLibro(Libro libro) {
         try {
             Connection connection = DriverManager.getConnection(DbConfig.URL, DbConfig.USER, DbConfig.PPW);
-            String query = "INSERT INTO BIBLIOTECA(CODECE_ISBN, TITOLO, GENERE, ANNO_PUBBLICAZIONE, AUTORE)" +
-                   "VALUES(?,?,?,?)" ;
+            String query = "INSERT INTO LIBRO(CODICE_ISBN, TITOLO, GENERE, ANNO_PUBBLICAZIONE, AUTORE) VALUES(?,?,?,?,?)";
             PreparedStatement statement = connection.prepareStatement((query));
+
             statement.setString(1, libro.getCodiceIsbn());
             statement.setString(2, libro.getTitolo());
             statement.setString(3, libro.getGenere());
             statement.setString(4, libro.getAnno_pubblicazione());
+            statement.setString(5, libro.getAutore());
 
             statement.executeUpdate();
-            System.out.println("Libro inserito");
+            return "Libro inserito";
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
+        return "Non inserito";
+    }
+
+
+    public static List<Libro> getLibroByGenere(String genere) {
+        List<Libro> libroList = new ArrayList<>();
+        try {
+            Connection connection = DriverManager.getConnection(DbConfig.URL, DbConfig.USER, DbConfig.PPW);
+            String query = "SELECT * FROM LIBRO WHERE GENERE=?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, genere);
+
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                Libro l = new Libro(
+                        rs.getString("CODICE_ISBN"),
+                        rs.getString("TITOLO"),
+                        rs.getString("GENERE"),
+                        rs.getString("ANNO_PUBBLICAZIONE"),
+                        rs.getString("AUTORE")
+                );
+                libroList.add(l);
+            }
+            return libroList;  
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 }

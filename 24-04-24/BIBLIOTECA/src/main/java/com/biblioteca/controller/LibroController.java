@@ -14,10 +14,16 @@ public class LibroController {
     }
 
     @PostMapping("/addLibri")
-    public void InserisciLibro(@RequestBody Libro libro) {
+    public static String InserisciLibro(@RequestBody Libro libro) {
+
+        return LibroRepository.inserisciLibro(libro);
     }
 
+   @GetMapping("/SelezioneByGenere")
 
+    public static String getLibroByGenere(@RequestParam String genere) {
+        return LibroRepository.getLibroByGenere(genere);
+   }
 }
 
 
